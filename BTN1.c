@@ -57,6 +57,7 @@ bool chinhphuong(int num)
     }
 }
 
+// Nguyen Bao Minh - CD230600
 // Tính tổng các số nguyên tố trong mảng
 int tongsonguyento(int a[], int n)
 {
@@ -64,6 +65,21 @@ int tongsonguyento(int a[], int n)
     for (int i = 0; i < n; ++i)
     {
         if (nguyento(a[i]))
+        {
+            sum += a[i];
+        }
+    }
+    return sum;
+}
+
+// Nguyen Bao Minh - CD230600
+// Tính tổng các số chính phương trong mảng
+int tongsochinhphuong(int a[], int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; ++i)
+    {
+        if (chinhphuong(a[i]))
         {
             sum += a[i];
         }
@@ -908,6 +924,16 @@ int main()
                     }
                 }
                 printf("\n\nTONG CAC SO NGUYEN TO TRONG MANG LA: %d\n", tongsonguyento(a_5_2_Minh_CD230600, n_5_2_Minh_CD230600));
+                int dem3_5_2_Minh_CD230600 = 0;
+                for (int i = 0; i < n_5_2_Minh_CD230600; i++)
+                {
+                    if (chinhphuong(a_5_2_Minh_CD230600[i]))
+                    {
+                        dem3_5_2_Minh_CD230600++;
+                        printf("\nSo thu %d: %d", dem3_5_2_Minh_CD230600, a_5_2_Minh_CD230600[i]);
+                    }
+                }
+                printf("\n\nTONG CAC SO CHINH PHUONG TRONG MANG LA: %d\n", tongsochinhphuong(a_5_2_Minh_CD230600, n_5_2_Minh_CD230600));
                 printf("\n");
                 printf("Nhan 1 de thuc hien lai chuong trinh nay\nNhan 2 de thuc hien chuong trinh khac\n");
                 int k;
